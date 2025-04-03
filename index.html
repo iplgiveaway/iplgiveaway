@@ -13,28 +13,27 @@
             color: white;
             margin: 0;
             padding: 0;
-            overflow-x: hidden;
-            overflow-y: auto;
         }
         .container {
-            width: 90%;
-            max-width: 600px;
-            margin: 20px auto;
+            width: 95%;
+            max-width: 350px;
+            margin: 10px auto;
             background: rgba(0, 0, 0, 0.9);
-            padding: 20px;
+            padding: 15px;
             border-radius: 10px;
-            box-shadow: 0px 0px 15px gold;
+            box-shadow: 0px 0px 10px gold;
         }
         .banner {
             width: 100%;
-            border-radius: 10px;
+            border-radius: 5px;
         }
-        .highlight { color: gold; font-size: 24px; font-weight: bold; }
+        .highlight { color: gold; font-size: 18px; font-weight: bold; }
         button {
-            background-color: gold; color: black; padding: 12px 20px; border: none;
-            cursor: pointer; font-size: 18px; border-radius: 5px; font-weight: bold;
+            background-color: gold; color: black; padding: 8px 15px; border: none;
+            cursor: pointer; font-size: 16px; border-radius: 5px; font-weight: bold;
         }
         button:hover { background-color: darkgoldenrod; }
+        h1, h2, h3, p { margin: 5px 0; font-size: 14px; }
     </style>
 </head>
 <body>
@@ -48,99 +47,87 @@
         <p>📢 Winner Announcement: <span class="highlight">Live on Instagram - 6th May 2025</span></p>
         <p>👉 Follow us on Instagram for updates!</p>
         <p><del>₹199</del> Entry Fee: ₹49 per coupon</p>
-        <button onclick="location.href='payment.html'">Register Now</button>
+        <button onclick="location.href='register.html'">Register Now</button>
     </div>
 </body>
 </html>
 
-<!-- PAYMENT.HTML - Payment Processing Page -->
+<!-- REGISTER.HTML - Registration Page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Page</title>
+    <title>Register</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background: linear-gradient(to bottom, #d50000, #000);
-            color: white;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 90%;
-            max-width: 400px;
-            margin: 20px auto;
-            background: rgba(0, 0, 0, 0.9);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 15px gold;
-        }
-        h1 { color: gold; }
-        button {
-            background-color: gold; color: black; padding: 12px 20px;
-            border: none; cursor: pointer; font-size: 18px; border-radius: 5px;
-            font-weight: bold;
-        }
+        body { font-family: Arial, sans-serif; text-align: center; background: linear-gradient(to bottom, #d50000, #000); color: white; margin: 0; padding: 0; }
+        .container { width: 95%; max-width: 350px; margin: 10px auto; background: rgba(0, 0, 0, 0.9); padding: 15px; border-radius: 10px; box-shadow: 0px 0px 10px gold; }
+        input, select, button { width: 100%; padding: 8px; margin: 5px 0; border-radius: 5px; border: none; font-size: 14px; }
+        button { background-color: gold; color: black; font-weight: bold; cursor: pointer; }
         button:hover { background-color: darkgoldenrod; }
     </style>
 </head>
 <body>
+    <h1>Register for the Contest</h1>
     <div class="container">
-        <h1>Complete Your Payment</h1>
-        <p>Total Amount: ₹<span id="totalPrice">245</span></p>
-        <button onclick="processPayment()">Pay Now</button>
+        <form action="payment.html">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <label for="coupons">Number of Coupons:</label>
+            <select id="coupons" name="coupons">
+                <option value="1">1</option>
+                <option value="5" selected>5</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+            </select>
+            <button type="submit">Proceed to Payment</button>
+        </form>
     </div>
-    <script>
-        function processPayment() {
-            alert("Payment Successful!");
-            window.location.href = 'confirmation.html';
-        }
-    </script>
 </body>
 </html>
 
-<!-- CONFIRMATION.HTML - After Payment Success -->
+<!-- PAYMENT.HTML - Payment Page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmation Page</title>
+    <title>Payment</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background: linear-gradient(to bottom, #d50000, #000);
-            color: white;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 90%;
-            max-width: 400px;
-            margin: 20px auto;
-            background: rgba(0, 0, 0, 0.9);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 15px gold;
-        }
-        h1 { color: gold; }
-        .link-box {
-            background: #222; padding: 10px; border-radius: 5px; margin-top: 15px;
-        }
+        body { font-family: Arial, sans-serif; text-align: center; background: linear-gradient(to bottom, #d50000, #000); color: white; margin: 0; padding: 0; }
+        .container { width: 95%; max-width: 350px; margin: 10px auto; background: rgba(0, 0, 0, 0.9); padding: 15px; border-radius: 10px; box-shadow: 0px 0px 10px gold; }
+        button { background-color: gold; color: black; padding: 8px 15px; border-radius: 5px; font-weight: bold; cursor: pointer; }
+        button:hover { background-color: darkgoldenrod; }
     </style>
 </head>
 <body>
+    <h1>Payment</h1>
     <div class="container">
-        <h1>Payment Successful! 🎉</h1>
-        <p>Thank you for participating! Please fill out the Google Form to complete your entry.</p>
-        <div class="link-box">
-            <p><strong>Google Form Link:</strong></p>
-            <p><a href="#" id="googleFormLink">[PLACE YOUR GOOGLE FORM LINK HERE]</a></p>
-        </div>
+        <p>Total Amount: ₹<span id="amount">245</span></p>
+        <button onclick="location.href='confirmation.html'">Pay Now</button>
+    </div>
+</body>
+</html>
+
+<!-- CONFIRMATION.HTML - Confirmation Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background: linear-gradient(to bottom, #d50000, #000); color: white; margin: 0; padding: 0; }
+        .container { width: 95%; max-width: 350px; margin: 10px auto; background: rgba(0, 0, 0, 0.9); padding: 15px; border-radius: 10px; box-shadow: 0px 0px 10px gold; }
+    </style>
+</head>
+<body>
+    <h1>Payment Successful 🎉</h1>
+    <div class="container">
+        <p>Thank you for your registration! Complete your details below:</p>
+        <p><a href="#" id="googleForm">Fill Google Form</a></p>
     </div>
 </body>
 </html>
