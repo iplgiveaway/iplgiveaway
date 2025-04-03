@@ -1,3 +1,108 @@
+<!-- INDEX.HTML - Main Event Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RCB vs DC Contest</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to bottom, #d50000, #000);
+            color: white;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 20px auto;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px gold;
+        }
+        .banner {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .highlight { color: gold; font-size: 24px; font-weight: bold; }
+        button {
+            background-color: gold; color: black; padding: 12px 20px; border: none;
+            cursor: pointer; font-size: 18px; border-radius: 5px; font-weight: bold;
+        }
+        button:hover { background-color: darkgoldenrod; }
+    </style>
+</head>
+<body>
+    <h1>🎟️ 10 Tickets Giveaway! 🎉</h1>
+    <div class="container">
+        <img src="IMG_8721.png" alt="RCB vs DC" class="banner">
+        <h2>🏆 First Prize: <span class="highlight">5 TICKETS</span></h2>
+        <h3>🥈 Second Prize: <span class="highlight">3 TICKETS</span></h3>
+        <h3>🥉 Third Prize: <span class="highlight">2 TICKETS</span></h3>
+        <p>📅 Match Date: <span class="highlight">8th April 2025</span></p>
+        <p>📢 Winner Announcement: <span class="highlight">Live on Instagram - 6th May 2025</span></p>
+        <p>👉 Follow us on Instagram for updates!</p>
+        <p><del>₹199</del> Entry Fee: ₹49 per coupon</p>
+        <button onclick="location.href='payment.html'">Register Now</button>
+    </div>
+</body>
+</html>
+
+<!-- PAYMENT.HTML - Payment Processing Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to bottom, #d50000, #000);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 400px;
+            margin: 20px auto;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px gold;
+        }
+        h1 { color: gold; }
+        button {
+            background-color: gold; color: black; padding: 12px 20px;
+            border: none; cursor: pointer; font-size: 18px; border-radius: 5px;
+            font-weight: bold;
+        }
+        button:hover { background-color: darkgoldenrod; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Complete Your Payment</h1>
+        <p>Total Amount: ₹<span id="totalPrice">245</span></p>
+        <button onclick="processPayment()">Pay Now</button>
+    </div>
+    <script>
+        function processPayment() {
+            alert("Payment Successful!");
+            window.location.href = 'confirmation.html';
+        }
+    </script>
+</body>
+</html>
+
+<!-- CONFIRMATION.HTML - After Payment Success -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,8 +117,6 @@
             color: white;
             margin: 0;
             padding: 0;
-            overflow-x: hidden;
-            overflow-y: auto;
         }
         .container {
             width: 90%;
@@ -23,16 +126,10 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 0px 15px gold;
-            position: relative;
         }
-        h1 {
-            color: gold;
-        }
+        h1 { color: gold; }
         .link-box {
-            background: #222;
-            padding: 10px;
-            border-radius: 5px;
-            margin-top: 15px;
+            background: #222; padding: 10px; border-radius: 5px; margin-top: 15px;
         }
     </style>
 </head>
@@ -48,3 +145,5 @@
 </body>
 </html>
 
+ 
+  
